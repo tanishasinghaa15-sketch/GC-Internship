@@ -30,11 +30,11 @@ def scrape_google_search(query):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(random.uniform(2, 5))
     results = []
-    count = 0
+   
     search_results = driver.find_elements(By.CLASS_NAME, "tF2Cxc")
     for result in search_results:
         try:
-            count += 1
+        
             title_element = result.find_element(By.TAG_NAME, "h3")
             link_element = result.find_element(By.TAG_NAME, "a")
             desc_element = result.find_element(By.CLASS_NAME, "VwiC3b")
@@ -59,8 +59,8 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"Error: {e}")
         data = []
-    
-    print(f"Total scraper results: {len(data)} v/s Total scrap instances: {count}")
+      # here we will get  the eror
+    print(f"Total scraper results: {len(data)}")
     
     saved_data = load_results("results.json")  
     for item in data:
