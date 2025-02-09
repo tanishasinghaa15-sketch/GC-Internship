@@ -53,7 +53,10 @@ def scrape_google_search(query):
     return results
 
 if __name__ == "__main__":
-    query = "winter vacations in India"
+    query = input("Enter search query: ")
+    if not query:
+        query = "Python programming"
+    
     try:
         data = scrape_google_search(query)
     except Exception as e:
