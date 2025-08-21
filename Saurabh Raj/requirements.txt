@@ -1,4 +1,0 @@
-selenium==4.11.2
-webdriver_manager==4.0.0
-docopt==0.6.2
-colorful==0.5.5
